@@ -76,6 +76,7 @@ Please be patient while the tool processes the file. The application will keep y
 
 ## Project Structure
 
+```
 unlockpdf/
 ├── app.py # Flask application
 ├── templates/
@@ -87,8 +88,9 @@ unlockpdf/
 │ └── script.js # JavaScript file for interactivity
 ├── uploads/ # Directory for uploaded and processed files
 ├── venv/ # Virtual environment (optional)
+├── requirements.txt # Python dependencies
 └── README.md # Project README file
-
+```
 
 ## Contributing
 
@@ -100,7 +102,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or support, please contact [trivedi.gaurav30@gamil.com](mailto:trivedi.gaurav30@gamil.com).
+For any questions or support, please contact [trivedi.gaurav30@gmail.com](mailto:trivedi.gaurav30@gmail.com).
 
 ---
 
