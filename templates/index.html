@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Password Brute Force Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Password Brute Force Tool</h1>
+        <form id="pdf-form">
+            <label for="file">Upload PDF:</label>
+            <input type="file" id="file" name="file" required>
+            
+            <label for="max_length">Number of characters in password:</label>
+            <input type="number" id="max_length" name="max_length" min="1" required>
+            
+            <label for="char_type">Type of characters in password:</label>
+            <select id="char_type" name="char_type">
+                <option value="Numbers">Numbers</option>
+                <option value="Alphabets">Alphabets</option>
+                <option value="Alphanumeric">Alphanumeric</option>
+            </select>
+            
+            <button type="submit">Start Brute Force</button>
+        </form>
+        
+        <div id="status" class="hidden">
+            <p class="processing">Processing... This may take some time.</p>
+            <p>Estimated time to process: <span id="estimated-time"></span> seconds</p>
+        </div>
+
+        <div id="result" class="hidden result">
+            <p>Password found! Your password was: <span id="found-password"></span></p>
+            <p>You can download the unlocked PDF <a id="download-link" href="#" target="_blank">here</a>.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
